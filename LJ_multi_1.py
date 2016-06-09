@@ -22,7 +22,7 @@ def main_1():
         results = pool.map(v_LJ, distances) # calculate results IN PARALLEL
 
         v_total = np.sum(results)           # sum up total
-        print(v_total)                      # print result
+        print("v_Total: {}".format(v_total))# print result
 
         stop = time.time()                  # stop timer
         print("Total Runtime: {:.3f} seconds".format(stop-start))

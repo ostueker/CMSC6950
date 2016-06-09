@@ -55,8 +55,8 @@ def main_4():
         stop = time.time()
         print("done!\tRuntime: {:6.3f} seconds".format(stop-start))
 
-        v_total = np.sum(results)
-        print(v_total)
+        v_total = np.sum(results)               # sum up total
+        print("v_Total: {}".format(v_total))    # print result
         print(20*"-"+"\n")
 
 if __name__ == '__main__':
