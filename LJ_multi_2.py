@@ -33,7 +33,7 @@ def main_2():
 
         v_total = np.sum(results)           # sum up total
 
-        print("v_Total: {}".format(v_total))# print result
+        print("v_Total: {:.2f}".format(v_total))# print result
         print(20*"-"+"\n")
 
 if __name__ == '__main__':

@@ -39,6 +39,7 @@ def main_5():
     pairs   = generate_pairs(len(coords))
     stop = time.time()
     print("done!\t\tRuntime: {:6.3f} seconds".format(stop-start))
+    print(20*"-"+"\n")
 
     for n_CPUs in [1, 2, 4]:
         print("Parallel LJ-Potential on {} points using {} processes:".format(n_points, n_CPUs))
@@ -60,7 +61,7 @@ def main_5():
         print("done!\tRuntime: {:6.3f} seconds".format(stop-start))
 
         v_total = np.sum(results)               # sum up total
-        print("v_Total: {}".format(v_total))    # print result
+        print("v_Total: {:.2f}".format(v_total))    # print result
         print(20*"-"+"\n")
 
 if __name__ == '__main__':
