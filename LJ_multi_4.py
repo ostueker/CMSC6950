@@ -10,7 +10,7 @@ def generate_pairs(n):
     for i in range(n):
         for j in range(n):
             if j>i:
-                pairs.append([i,j])
+                pairs.append((i,j))
     return pairs
 
 def calc_pot(args):
@@ -52,6 +52,7 @@ def main_4():
             tasks.append(args)
 
         results = pool.map(calc_pot, tasks)     # <-- in parallel
+        pool.close()
 
         stop = time.time()
         print("done!\tRuntime: {:6.3f} seconds".format(stop-start))

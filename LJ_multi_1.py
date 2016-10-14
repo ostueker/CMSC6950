@@ -20,6 +20,7 @@ def main_1():
 
         pool = Pool(n_CPUs)                 # create multiprocessing pool
         results = pool.map(v_LJ, distances) # calculate results IN PARALLEL
+        pool.close()                        # stop pool (free memory)
 
         v_total = np.sum(results)           # sum up total
         print("v_Total: {:.2f}".format(v_total))# print result

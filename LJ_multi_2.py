@@ -28,6 +28,7 @@ def main_2():
         start = time.time()
         pool = Pool(n_CPUs)                 # create multiprocessing pool
         results = pool.map(v_LJ, distances) # calculate results IN PARALLEL
+        pool.close()
         stop = time.time()
         print("done!\tRuntime: {:6.3f} seconds".format(stop-start))
 
