@@ -28,7 +28,7 @@ def calc_distances(points):
     return np.array(distances)
 
 def run_serial(n_points):
-    ''' Run the calculation of the potiential energy in serial.
+    ''' Run the calculation of the potential energy in serial.
     
     - generate coordinates for *n_points* of particles.
     - calculate the distances for particle pairs
